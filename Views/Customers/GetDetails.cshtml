@@ -1,0 +1,33 @@
+﻿@model VidlyProject.Models.Customer
+@{
+    ViewBag.Title = "GetDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*
+The following lines are to make things a bit less verbos
+    @helper ShowIfNotNull(string header) {
+    @if (!string.IsNullOrEmpty(header))
+        @:<h2>header</h2>
+    }
+}
+
+    <h1>@Model.Title</h1>
+    @ShowIfNotNull(Model.Subtitle)
+*@
+
+<h2>Details</h2>
+<h1>@Model.Name</h1>
+<ul>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @*OR <li>@Html.DisplayNameFor(m => m.MembershipType.Name) : @Model.MembershipType.Name</li>
+        && [Display(Name = "Membership Type")]
+           public string Name { get; set; }
+    *@
+    @if (Model.Birthdate != null)
+    {
+        @* or Model.Birthdate.HasValue *@
+        <li>Birthdate: @Model.Birthdate.Value.ToShortDateString()</li>
+    }
+</ul>
+

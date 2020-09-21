@@ -1,0 +1,59 @@
+﻿@model VidlyProject.ViewModels.CustomerFormViewModel
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Save", "Customers"))
+{
+    <!--we surround it in using since beginform creates a <form> tag not </form> so we need to close it afterwards-->
+
+    @Html.ValidationSummary(true, "Please fix the following errors.");
+   
+
+    <div class="form-group">
+        <!--bootstrap class for a responsive form-->
+        @Html.LabelFor(m => m.Customer.Name) <!--label-->
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" }) <!--next paramter is an anonymous object, where each element is rendered as an html attribute-->
+        @**\@class not class because class is reserved in c#-->**@
+        @Html.ValidationMessageFor(m => m.Customer.Name)  @*name field requires validation*@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, 
+                              new SelectList(Model.MembershipTypes, @*initialize a drop down list*@
+                              "Id", @*Name of property in membershiptype class that holds the value for each item*@
+                              "Name"), @*Property that holds the text of each item*@
+                              "Please select a membership type", @*message at the beginning of the dropdown*@
+                              new { @class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Birthdate)
+        @*OR <lable for="Birthdate">Date Of Birth</label>*@
+                                                    @*format string to format the date *@
+        @Html.TextBoxFor(m => m.Customer.Birthdate, "{0: d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.Birthdate)
+    </div>
+
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter, new { @class = "form-check-input" }) Subscribed to the Newsletter?
+        </label>
+    </div>
+    @Html.HiddenFor(c => c.Customer.Id) <!--so that we set an id and the id isnt zero-->
+    @Html.AntiForgeryToken()  <!--creates a token and puts it as a hidden field in this form and as a cookie in the user's computer-->
+    <button type="submit" class="btn btn-primary">Save</button>
+    
+}
+
+@section scripts{ @*for client-side validation*@
+    @Scripts.Render("~/bundles/jqueryval")    
+}
+
