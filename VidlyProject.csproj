@@ -209,6 +209,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
@@ -218,105 +219,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007271619511_InitialModel.cs" />
-    <Compile Include="Migrations\202007271619511_InitialModel.designer.cs">
-      <DependentUpon>202007271619511_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202009211738232_Initial.cs" />
+    <Compile Include="Migrations\202009211738232_Initial.designer.cs">
+      <DependentUpon>202009211738232_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007271645403_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\202007271645403_AddIsSubscribedToCustomer.designer.cs">
-      <DependentUpon>202007271645403_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\202009211741437_AddRentals.cs" />
+    <Compile Include="Migrations\202009211741437_AddRentals.designer.cs">
+      <DependentUpon>202009211741437_AddRentals.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007271653254_AddMembershipType.cs" />
-    <Compile Include="Migrations\202007271653254_AddMembershipType.designer.cs">
-      <DependentUpon>202007271653254_AddMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007271910098_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\202007271910098_PopulateMembershipTypes.designer.cs">
-      <DependentUpon>202007271910098_PopulateMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007271933099_ApplyAnnotationsToCustomerName.cs" />
-    <Compile Include="Migrations\202007271933099_ApplyAnnotationsToCustomerName.designer.cs">
-      <DependentUpon>202007271933099_ApplyAnnotationsToCustomerName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281000580_AddNameToMembershipType.cs" />
-    <Compile Include="Migrations\202007281000580_AddNameToMembershipType.designer.cs">
-      <DependentUpon>202007281000580_AddNameToMembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281002413_SetNameOfMembershipTypes.cs" />
-    <Compile Include="Migrations\202007281002413_SetNameOfMembershipTypes.designer.cs">
-      <DependentUpon>202007281002413_SetNameOfMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281120245_AddBirthdateToCustomer.cs" />
-    <Compile Include="Migrations\202007281120245_AddBirthdateToCustomer.designer.cs">
-      <DependentUpon>202007281120245_AddBirthdateToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281222280_AddMovie.cs" />
-    <Compile Include="Migrations\202007281222280_AddMovie.designer.cs">
-      <DependentUpon>202007281222280_AddMovie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281238529_TestRemoveMembershipTypeId.cs" />
-    <Compile Include="Migrations\202007281238529_TestRemoveMembershipTypeId.designer.cs">
-      <DependentUpon>202007281238529_TestRemoveMembershipTypeId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281242175_TestReturnMembershipTypeId.cs" />
-    <Compile Include="Migrations\202007281242175_TestReturnMembershipTypeId.designer.cs">
-      <DependentUpon>202007281242175_TestReturnMembershipTypeId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281245083_AddGenres.cs" />
-    <Compile Include="Migrations\202007281245083_AddGenres.designer.cs">
-      <DependentUpon>202007281245083_AddGenres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007281328418_testforme.cs" />
-    <Compile Include="Migrations\202007281328418_testforme.designer.cs">
-      <DependentUpon>202007281328418_testforme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008171731489_ChangeCustomerNameLengthToFiveChars.cs" />
-    <Compile Include="Migrations\202008171731489_ChangeCustomerNameLengthToFiveChars.designer.cs">
-      <DependentUpon>202008171731489_ChangeCustomerNameLengthToFiveChars.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008171737372_ReverseChangeCustomerNameLengthToFiveChars.cs" />
-    <Compile Include="Migrations\202008171737372_ReverseChangeCustomerNameLengthToFiveChars.designer.cs">
-      <DependentUpon>202008171737372_ReverseChangeCustomerNameLengthToFiveChars.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008181112179_ChangeCustomerNameLengthToFiveCharsAgain.cs" />
-    <Compile Include="Migrations\202008181112179_ChangeCustomerNameLengthToFiveCharsAgain.designer.cs">
-      <DependentUpon>202008181112179_ChangeCustomerNameLengthToFiveCharsAgain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008181114311_ReverseChangeCustomerNameLengthToFiveCharsAgain.cs" />
-    <Compile Include="Migrations\202008181114311_ReverseChangeCustomerNameLengthToFiveCharsAgain.designer.cs">
-      <DependentUpon>202008181114311_ReverseChangeCustomerNameLengthToFiveCharsAgain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008181223385_AddRangeAnnotationToNumberInStockPropertyInMovieModel.cs" />
-    <Compile Include="Migrations\202008181223385_AddRangeAnnotationToNumberInStockPropertyInMovieModel.designer.cs">
-      <DependentUpon>202008181223385_AddRangeAnnotationToNumberInStockPropertyInMovieModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009182127134_changeMovieRequirements.cs" />
-    <Compile Include="Migrations\202009182127134_changeMovieRequirements.designer.cs">
-      <DependentUpon>202009182127134_changeMovieRequirements.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009182130417_dateAddedInMoviesNoLongerNullable.cs" />
-    <Compile Include="Migrations\202009182130417_dateAddedInMoviesNoLongerNullable.designer.cs">
-      <DependentUpon>202009182130417_dateAddedInMoviesNoLongerNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009191600147_SeedUsers.cs" />
-    <Compile Include="Migrations\202009191600147_SeedUsers.designer.cs">
-      <DependentUpon>202009191600147_SeedUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009191710374_AddDrivingLicenseToApplicationUser.cs" />
-    <Compile Include="Migrations\202009191710374_AddDrivingLicenseToApplicationUser.designer.cs">
-      <DependentUpon>202009191710374_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009192125257_AddPhoneToApplicationUser.cs" />
-    <Compile Include="Migrations\202009192125257_AddPhoneToApplicationUser.designer.cs">
-      <DependentUpon>202009192125257_AddPhoneToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009211036560_AddRental.cs" />
-    <Compile Include="Migrations\202009211036560_AddRental.designer.cs">
-      <DependentUpon>202009211036560_AddRental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009211649050_AddingMovieRentals.cs" />
-    <Compile Include="Migrations\202009211649050_AddingMovieRentals.designer.cs">
-      <DependentUpon>202009211649050_AddingMovieRentals.cs</DependentUpon>
+    <Compile Include="Migrations\202009211750526_AddNumberAvailableToMovie.cs" />
+    <Compile Include="Migrations\202009211750526_AddNumberAvailableToMovie.designer.cs">
+      <DependentUpon>202009211750526_AddNumberAvailableToMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -450,16 +363,23 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -537,6 +457,12 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -582,6 +508,7 @@
     <Content Include="Views\Movies\MoviesForm.cshtml" />
     <Content Include="Views\Movies\ReadOnlyList.cshtml" />
     <Content Include="Views\Movies\List.cshtml" />
+    <Content Include="Views\Rentals\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -600,80 +527,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007271619511_InitialModel.resx">
-      <DependentUpon>202007271619511_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009211738232_Initial.resx">
+      <DependentUpon>202009211738232_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007271645403_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>202007271645403_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009211741437_AddRentals.resx">
+      <DependentUpon>202009211741437_AddRentals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007271653254_AddMembershipType.resx">
-      <DependentUpon>202007271653254_AddMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007271910098_PopulateMembershipTypes.resx">
-      <DependentUpon>202007271910098_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007271933099_ApplyAnnotationsToCustomerName.resx">
-      <DependentUpon>202007271933099_ApplyAnnotationsToCustomerName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281000580_AddNameToMembershipType.resx">
-      <DependentUpon>202007281000580_AddNameToMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281002413_SetNameOfMembershipTypes.resx">
-      <DependentUpon>202007281002413_SetNameOfMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281120245_AddBirthdateToCustomer.resx">
-      <DependentUpon>202007281120245_AddBirthdateToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281222280_AddMovie.resx">
-      <DependentUpon>202007281222280_AddMovie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281238529_TestRemoveMembershipTypeId.resx">
-      <DependentUpon>202007281238529_TestRemoveMembershipTypeId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281242175_TestReturnMembershipTypeId.resx">
-      <DependentUpon>202007281242175_TestReturnMembershipTypeId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281245083_AddGenres.resx">
-      <DependentUpon>202007281245083_AddGenres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007281328418_testforme.resx">
-      <DependentUpon>202007281328418_testforme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008171731489_ChangeCustomerNameLengthToFiveChars.resx">
-      <DependentUpon>202008171731489_ChangeCustomerNameLengthToFiveChars.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008171737372_ReverseChangeCustomerNameLengthToFiveChars.resx">
-      <DependentUpon>202008171737372_ReverseChangeCustomerNameLengthToFiveChars.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008181112179_ChangeCustomerNameLengthToFiveCharsAgain.resx">
-      <DependentUpon>202008181112179_ChangeCustomerNameLengthToFiveCharsAgain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008181114311_ReverseChangeCustomerNameLengthToFiveCharsAgain.resx">
-      <DependentUpon>202008181114311_ReverseChangeCustomerNameLengthToFiveCharsAgain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008181223385_AddRangeAnnotationToNumberInStockPropertyInMovieModel.resx">
-      <DependentUpon>202008181223385_AddRangeAnnotationToNumberInStockPropertyInMovieModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009182127134_changeMovieRequirements.resx">
-      <DependentUpon>202009182127134_changeMovieRequirements.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009182130417_dateAddedInMoviesNoLongerNullable.resx">
-      <DependentUpon>202009182130417_dateAddedInMoviesNoLongerNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009191600147_SeedUsers.resx">
-      <DependentUpon>202009191600147_SeedUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009191710374_AddDrivingLicenseToApplicationUser.resx">
-      <DependentUpon>202009191710374_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009192125257_AddPhoneToApplicationUser.resx">
-      <DependentUpon>202009192125257_AddPhoneToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009211036560_AddRental.resx">
-      <DependentUpon>202009211036560_AddRental.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009211649050_AddingMovieRentals.resx">
-      <DependentUpon>202009211649050_AddingMovieRentals.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009211750526_AddNumberAvailableToMovie.resx">
+      <DependentUpon>202009211750526_AddNumberAvailableToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

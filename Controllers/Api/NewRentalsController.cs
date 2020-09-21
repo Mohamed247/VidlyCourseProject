@@ -30,15 +30,32 @@ namespace VidlyProject.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateNewMovieRentals(NewRentalDto newRental)
         {
-            Customer customer = _context.Customers.Single(
-                c => c.Id == newRental.CusomterId);
 
+            if (newRental.MovieIds.Count == 0)
+                return BadRequest("No Movie Ids have been given");
+
+            Customer customer = _context.Customers.SingleOrDefault(
+                c => c.Id == newRental.CustomerId);
+
+                if (customer == null)
+                return BadRequest("Customer Id is not valid");
+           
+            
             
             var movies = _context.Movies.Where(
-                m => newRental.MovieIds.Contains(m.Id));
+                m => newRental.MovieIds.Contains(m.Id)).ToList();
+
+            if (movies.Count != newRental.MovieIds.Count)
+                return BadRequest("One or more Movie Ids are invalid.");
+
 
             foreach(Movie movie in movies)
             {
+                if (movie.NumberAvailable == 0)
+                    return BadRequest("Movie is not available.");
+
+                movie.NumberAvailable--;
+
                 MovieRental rental = new MovieRental
                 {
                     Customer = customer,
