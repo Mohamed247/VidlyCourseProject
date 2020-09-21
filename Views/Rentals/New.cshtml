@@ -62,6 +62,7 @@
                 source: customers
             }).on("typeahead:select", function (e, customer) {
                 vm.customerId = customer.id;
+
             });
 
             var movies = new Bloodhound({
